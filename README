@@ -1,0 +1,59 @@
+
+Differential Top production cross section
+unfolding software
+
+Uses two external packages:
+- RooUnfold, which does much of the unfolding, though has local changes and therefore must be included in the repository.
+- tclap, which handles command line parsing in C++
+
+Overview of files:
+In general, C++ classes are made the following way: inc/class.h src/class.cpp
+  Then, the class name must be added to the make file in the OBJ variable.
+In general, executables (containing a main() function) should be made the following way: src/executable.cxx
+  Then, the executable must have it's own BIN# variable created and added to the BINOBJ variable in the make file.
+
+classes:
+AtlasStyle: the atlas ROOT style
+FileHandler: manages the output root file containing all unfolding results.
+FileList:   given a text file containing a list of files, each on its own line, 
+            this class will extract the files. Then the class has implemented
+            many of the functions of a vector so you can treat it as such and
+            loop over the filenames from the list.
+globals:    contains generic global information and functions all functions
+            and methods should be static
+HistoName:  HistoName is deprecated by SampleDef and should not be used.
+SampleDef:  Defines the histogram location in the MC input files coming from
+            TopNtupleAnalysis, there is an ENUM for each combination of NTagX,
+            and TopX which define the histogram names.
+SystematicHistoGroup: This is used in the combineSystematics executable in order
+            to keep track of some pointers to histograms, could be reworked...
+SystematicSample: This file is created by scripts/makeSystematicSample.py and 
+            keeps track of which systematic sample you are working with, such
+            as "nominal", "btagsfdown", etc. and provides some tools for converting
+            between the ENUM and std::string representations.
+Th1PlusLegend: The class manages a few histograms and a legend with the idea that
+            when you have more than one histogram to present, you typically need a
+            legend, so why not work with them together?
+Th1PlotAndRatio: This class will plot data and mc on top, and in a smaller plot
+            immediately below, the ratio of the two. Still in developement as
+            of June 1 2012.
+ttbarUnfold: This class acts as the interface to RooUnfold and performs drives the
+            act of unfolding. It also retrieves the histograms from the input files
+            needed to perform the unfolding. All histograms created by this class,
+            will be deleted.
+ttbarUnfoldAnalysis: This class uses ttbarUnfold to perform some analyses. The two
+            primary being the ensembles, and the toys. There is also the test of
+            different unfolding methods and a test of smearing the migration matrix
+            which is not supported by RooUnfold.
+
+
+executables (if not listed, probably not used anymore):
+In general, "-h" will get you some explanation on usage.
+compToys:   used to run the toy models to get the statistical error on the unfolding.
+unfoldingMethodsTest: used to run the test of all four unfolding methods and calculate
+            the systematic associated with the choice of SVD.
+combineSystematics: used to read in all the results of the toy unfolding for each
+            systematic sample, calculate the error with respect to the nominal,
+            and plot, and present using latex tables, the results.
+
+

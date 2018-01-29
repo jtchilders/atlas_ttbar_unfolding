@@ -1,0 +1,1 @@
+/mnt/ctpfs/carolina/ttbardata/nominal/subsamples/MC_el_T1_McAtNlo_Jimmy_nominal_half0.root

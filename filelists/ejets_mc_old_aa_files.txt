@@ -1,0 +1,15 @@
+/afs/cern.ch/user/c/childers/public/topOldMC/Top.hist.mc-EPS_aaa.ejets.Std.root
+/afs/cern.ch/user/c/childers/public/topOldMC/Top.hist.mc-EPS_aab.ejets.Std.root
+/afs/cern.ch/user/c/childers/public/topOldMC/Top.hist.mc-EPS_aac.ejets.Std.root
+/afs/cern.ch/user/c/childers/public/topOldMC/Top.hist.mc-EPS_aad.ejets.Std.root
+/afs/cern.ch/user/c/childers/public/topOldMC/Top.hist.mc-EPS_aae.ejets.Std.root
+/afs/cern.ch/user/c/childers/public/topOldMC/Top.hist.mc-EPS_aaf.ejets.Std.root
+/afs/cern.ch/user/c/childers/public/topOldMC/Top.hist.mc-EPS_aag.ejets.Std.root
+/afs/cern.ch/user/c/childers/public/topOldMC/Top.hist.mc-EPS_aah.ejets.Std.root
+/afs/cern.ch/user/c/childers/public/topOldMC/Top.hist.mc-EPS_aai.ejets.Std.root
+/afs/cern.ch/user/c/childers/public/topOldMC/Top.hist.mc-EPS_aaj.ejets.Std.root
+/afs/cern.ch/user/c/childers/public/topOldMC/Top.hist.mc-EPS_aak.ejets.Std.root
+/afs/cern.ch/user/c/childers/public/topOldMC/Top.hist.mc-EPS_aal.ejets.Std.root
+/afs/cern.ch/user/c/childers/public/topOldMC/Top.hist.mc-EPS_aam.ejets.Std.root
+/afs/cern.ch/user/c/childers/public/topOldMC/Top.hist.mc-EPS_aan.ejets.Std.root
+/afs/cern.ch/user/c/childers/public/topOldMC/Top.hist.mc-EPS_aao.ejets.Std.root
